@@ -105,19 +105,15 @@ img {
     cursor: pointer;
 }
 
-.top-header-right {
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-}
-
 .user-menu {
     list-style: none;
+    display: flex;
+    align-items: flex-end;
 }
 
 .user-menu li {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .cart {
@@ -129,10 +125,10 @@ img {
     width: 262px;
     position: absolute;
     z-index: 4;
-    left: 0%;
-    top: 100%;
+    left: -25px;
+    top: 30px;
     margin-top: 16px;
-    background: white;
+    background-color: #fff;
     border-radius: 5px;
     border: 1px solid #ececec;
     visibility: hidden;
@@ -140,13 +136,23 @@ img {
     transition: .3s;
 }
 
+.product-cart-list::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    position: absolute;
+    top: -8px;
+    left: 36px;
+    transform: rotate(45deg);
+    border-left: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+}
+
 .user-menu>li:hover .product-cart-list {
     visibility: visible;
     opacity: 1;
-}
-
-.cart:hover .cart-inner {
-    display: block;
 }
 
 .account-btn {
@@ -167,6 +173,76 @@ img {
     justify-content: space-between;
     width: 680px;
     margin: 0 auto;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.mega-menu {
+    position: absolute;
+    top: 43px;
+    left: -15px;
+    z-index: 10;
+    padding: 20px;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    background-color: #fff;
+    display: none;
+}
+
+.mega-menu-item {
+    margin-right: 20px;
+}
+
+.mega-menu-item:last-of-type {
+    margin-right: 0;
+}
+
+.mega-menu-heading {
+    padding-bottom: 8px;
+    width: 235px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e8e8e8;
+    /* margin-bottom: 8px; */
+}
+
+.mega-link {
+    display: block;
+    padding: 8px 0;
+    color: #222;
+}
+
+.mega-link:hover {
+    color: #f16d7f;
+}
+
+.mega-menu::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: 32px;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-left: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+    transform: rotate(45deg);
+}
+
+.menu-item:hover .mega-menu {
+    display: flex;
+}
+
+.menu-item-last:hover .mega-menu {
+    right: -15px;
+    left: auto;
+}
+
+.menu-item-last:hover .mega-menu::before {
+    right: 36px;
+    left: auto;
 }
 
 .menu-link {
