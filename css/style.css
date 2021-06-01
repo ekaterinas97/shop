@@ -107,15 +107,46 @@ img {
 
 .top-header-right {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    position: relative;
 }
 
-.basket {
+.user-menu {
+    list-style: none;
+}
+
+.user-menu li {
+    position: relative;
+    display: inline-block;
+}
+
+.cart {
     margin-right: 26px;
 }
 
-.cart-inner {
-    display: none;
+.product-cart-list {
+    padding: 20px 18px;
+    width: 262px;
+    position: absolute;
+    z-index: 4;
+    left: 0%;
+    top: 100%;
+    margin-top: 16px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #ececec;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+
+.user-menu>li:hover .product-cart-list {
+    visibility: visible;
+    opacity: 1;
+}
+
+.cart:hover .cart-inner {
+    display: block;
 }
 
 .account-btn {
