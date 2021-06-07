@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1a1f78895e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Главная</title>
 </head>
 
 <body>
-    <div class="header">
+    <header class="header">
         <div class="top-header">
             <div class="container">
                 <div class="top-header__inner">
@@ -24,7 +27,7 @@
                             <form class="search-form" action="#">
                                 <div class="browse">Browse</div>
                                 <input class="search-field" type="text" placeholder="Search for Item...">
-                                <input class="search-btn" type="button" value="">
+                                <input class="search-btn" type="button" value=""><i class="fas fa-search"></i>
                             </form>
                         </div>
                     </div>
@@ -42,7 +45,9 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#" class="shop-btn account-btn">My Account</a>
+                                <a href="#" class="shop-btn account-btn">My Account
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -183,7 +188,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </header>
     <div class="brand-section">
         <div class="container">
             <div class="brand-inner">
@@ -195,11 +200,11 @@
             </div>
         </div>
     </div>
-    <div class="products-section">
+    <div class="banner-section">
         <div class="container">
-            <div class="products-inner">
-                <div class="products-item">
-                    <a class="product-link" href="#">
+            <div class="banner-inner">
+                <div class="banner-item">
+                    <a class="banner-link" href="#">
                         <img src="images/layer-30.jpg" alt="">
                         <div class="sale-box">
                             <p class="sale-text">
@@ -208,7 +213,7 @@
                             </p>
                         </div>
                     </a>
-                    <a class="product-link" href="#">
+                    <a class="banner-link" href="#">
                         <img src="images/layer-37.jpg" alt="">
                         <div class="sale-box">
                             <p class="sale-text">
@@ -218,8 +223,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="products-item">
-                    <a class="product-link" href="#">
+                <div class="banner-item">
+                    <a class="banner-link" href="#">
                         <img src="images/layer-32.jpg" alt="">
                         <div class="sale-box">
                             <p class="sale-text">
@@ -228,7 +233,7 @@
                             </p>
                         </div>
                     </a>
-                    <a class="product-link" href="#">
+                    <a class="banner-link" href="#">
                         <img src="images/layer-31.jpg" alt="">
                         <div class="sale-box">
                             <p class="sale-text">
@@ -241,99 +246,142 @@
             </div>
         </div>
     </div>
-    <div class="featured-section">
+    <section class="products-section">
         <div class="container">
-            <h2 class="featured-title">Featured Items</h2>
+            <h2 class="products-title">Featured Items</h2>
             <p class="description">Shop for items based on what we featured in this week</p>
-            <div class="featured-list">
+            <div class="products-list">
                 <div class="item-wrapper">
-                    <a href="#" class="featured-item">
-                        <p href="#" class="add-to-cart-btn">Add to cart</p>
-                        <img src="images/layer-2.jpg" alt="">
-                        <div class="item-info">
-                            <p class="featured-item-title">Mango People T-shirt</p>
-                            <p class="price">$52.00</p>
+                    <a href="#" class="product-item">
+                        <img class="product-img" src="images/product-1.jpg" alt="photo">
+                        <div class="product-info">
+                            <p class="product-item-title">Mango People T-shirt</p>
+                            <p class="product-price">$52.00</p>
                         </div>
                     </a>
+                    <div class="add-box">
+                        <a class="add-btn" href="#">
+                            <img src="images/product-cart.svg" alt="">
+                            <p href="#" class="add-text">Add to cart</p>
+                        </a>
+                    </div>
                 </div>
                 <div class="item-wrapper">
-                    <a href="#" class="featured-item">
-                        <p href="#" class="add-to-cart-btn">Add to cart</p>
-                        <img src="images/layer-3.jpg" alt="">
-                        <div class="item-info">
-                            <p class="featured-item-title">Mango People T-shirt</p>
-                            <p class="price">$52.00</p>
+                    <a href="#" class="product-item">
+                        <img class="product-img" src="images/product-2.jpg" alt="">
+                        <div class="product-info">
+                            <p class="product-item-title">Mango People T-shirt</p>
+                            <p class="product-price">$52.00</p>
                         </div>
                     </a>
+                    <div class="add-box">
+                        <a class="add-btn" href="#">
+                            <img src="images/product-cart.svg" alt="">
+                            <p href="#" class="add-text">Add to cart</p>
+                        </a>
+                    </div>
                 </div>
                 <div class="item-wrapper">
-                    <a href="#" class="featured-item">
-                        <p href="#" class="add-to-cart-btn">Add to cart</p>
-                        <img src="images/layer-4.jpg" alt="">
-                        <div class="item-info">
-                            <p class="featured-item-title">Mango People T-shirt</p>
-                            <p class="price">$52.00</p>
+                    <a href="#" class="product-item">
+                        <img class="product-img" src="images/product-3.jpg" alt="">
+                        <div class="product-info">
+                            <p class="product-item-title">Mango People T-shirt</p>
+                            <p class="product-price">$52.00</p>
                         </div>
                     </a>
+                    <div class="add-box">
+                        <a class="add-btn" href="#">
+                            <img src="images/product-cart.svg" alt="">
+                            <p href="#" class="add-text">Add to cart</p>
+                        </a>
+                    </div>
                 </div>
                 <div class="item-wrapper">
-                    <a href="#" class="featured-item">
-                        <p href="#" class="add-to-cart-btn">Add to cart</p>
-                        <img src="images/layer-5.jpg" alt="">
-                        <div class="item-info">
-                            <p class="featured-item-title">Mango People T-shirt</p>
-                            <p class="price">$52.00</p>
+                    <a href="#" class="product-item">
+                        <img class="product-img" src="images/product-4.jpg" alt="">
+                        <div class="product-info">
+                            <p class="product-item-title">Mango People T-shirt</p>
+                            <p class="product-price">$52.00</p>
                         </div>
                     </a>
+                    <div class="add-box">
+                        <a class="add-btn" href="#">
+                            <img src="images/product-cart.svg" alt="">
+                            <p href="#" class="add-text">Add to cart</p>
+                        </a>
+                    </div>
                 </div>
                 <div class="item-wrapper">
-                    <a href="#" class="featured-item">
-                        <p href="#" class="add-to-cart-btn">Add to cart</p>
-                        <img src="images/layer-6.jpg" alt="">
-                        <div class="item-info">
-                            <p class="featured-item-title">Mango People T-shirt</p>
-                            <p class="price">$52.00</p>
+                    <a href="#" class="product-item">
+                        <img class="product-img" src="images/product-5.jpg" alt="">
+                        <div class="product-info">
+                            <p class="product-item-title">Mango People T-shirt</p>
+                            <p class="product-price">$52.00</p>
                         </div>
                     </a>
+                    <div class="add-box">
+                        <a class="add-btn" href="#">
+                            <img src="images/product-cart.svg" alt="">
+                            <p href="#" class="add-text">Add to cart</p>
+                        </a>
+                    </div>
                 </div>
                 <div class="item-wrapper">
-                    <a href="#" class="featured-item">
-                        <p href="#" class="add-to-cart-btn">Add to cart</p>
-                        <img src="images/layer-7.jpg" alt="">
-                        <div class="item-info">
-                            <p class="featured-item-title">Mango People T-shirt</p>
-                            <p class="price">$52.00</p>
+                    <a href="#" class="product-item">
+                        <img class="product-img" src="images/product-6.jpg" alt="">
+                        <div class="product-info">
+                            <p class="product-item-title">Mango People T-shirt</p>
+                            <p class="product-price">$52.00</p>
                         </div>
                     </a>
+                    <div class="add-box">
+                        <a class="add-btn" href="#">
+                            <img src="images/product-cart.svg" alt="">
+                            <p href="#" class="add-text">Add to cart</p>
+                        </a>
+                    </div>
                 </div>
                 <div class="item-wrapper">
-                    <a href="#" class="featured-item">
-                        <p href="#" class="add-to-cart-btn">Add to cart</p>
-                        <img src="images/layer-8.jpg" alt="">
-                        <div class="item-info">
-                            <p class="featured-item-title">Mango People T-shirt</p>
-                            <p class="price">$52.00</p>
+                    <a href="#" class="product-item">
+                        <img class="product-img" src="images/product-7.jpg" alt="">
+                        <div class="product-info">
+                            <p class="product-item-title">Mango People T-shirt</p>
+                            <p class="product-price">$52.00</p>
                         </div>
                     </a>
+                    <div class="add-box">
+                        <a class="add-btn" href="#">
+                            <img src="images/product-cart.svg" alt="">
+                            <p href="#" class="add-text">Add to cart</p>
+                        </a>
+                    </div>
                 </div>
                 <div class="item-wrapper">
-                    <a href="#" class="featured-item">
-                        <p href="#" class="add-to-cart-btn">Add to cart</p>
-                        <img src="images/layer-9.jpg" alt="">
-                        <div class="item-info">
-                            <p class="featured-item-title">Mango People T-shirt</p>
-                            <p class="price">$52.00</p>
+                    <a href="#" class="product-item">
+                        <img class="product-img" src="images/product-8.jpg" alt="">
+                        <div class="product-info">
+                            <p class="product-item-title">Mango People T-shirt</p>
+                            <p class="product-price">$52.00</p>
                         </div>
                     </a>
+                    <div class="add-box">
+                        <a class="add-btn" href="#">
+                            <img src="images/product-cart.svg" alt="">
+                            <p href="#" class="add-text">Add to cart</p>
+                        </a>
+                    </div>
                 </div>
 
             </div>
-            <div class="product-more">
-                <a href="#" class="shop-btn featured-btn">Browse All Product</a>
+            <div class="product-more-box">
+                <a href="#" class="shop-btn product-more-btn">
+                    Browse All Product
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </a>
             </div>
         </div>
-    </div>
-    <div class="offer-section">
+    </section>
+    <section class="offer-section">
         <div class="container">
             <div class="offer-box">
                 <div class="offer-img">
@@ -370,7 +418,162 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section class="subscribe">
+        <div class="container">
+            <div class="subscribe-inner">
+                <div class="subscribe-left">
+                    <div class="subscribe-slide">
+                        <div class="photo-box">
+                            <img src="images/profile-img.png" alt="photo" class="person-photo">
+                        </div>
+                        <div class="subscribe-tetx">
+                            <p class="slide-content">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+                            <p class="slide-text-down"><span>Bin Burhan</span><br> Dhaka, Bd
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="subscribe-right">
+                    <div class="form-wrap">
+                        <h4 class="subscribe-heading"><span>Subscribe</span> for our new letter and promotion</h4>
+                        <form action="#" class="subscribe-form">
+                            <input type="text" class="subscribe-field" placeholder="Enter Your Email">
+                            <input type="submit" value="Subscribe" class="subscribe-btn">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="footer-left">
+                        <div class="footer-logo">
+                            <a class="logo-box" href="#">
+                                <img src="images/logo.png" alt="Logo">
+                                <p class="logo-text">bran<span>d</span></p>
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit
+                                partnerships. </p>
+                            <p>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <dl class="footer-nav">
+                            <div class="footer-nav-wrap">
+                                <dt class="footer-nav-heading">COMPANY</dt>
+                                <dd>
+                                    <ul class="footer-nav-list">
+                                        <li class="footer-nav-item">
+                                            <a href="#" class="footer-nav-link">Home</a>
+                                        </li>
+                                        <li class="footer-nav-item">
+                                            <a href="#" class="footer-nav-link">Shop</a>
+                                        </li>
+                                        <li class="footer-nav-item">
+                                            <a href="#" class="footer-nav-link">About</a>
+                                        </li>
+                                        <li class="footer-nav-item">
+                                            <a href="#" class="footer-nav-link">How It Works</a>
+                                        </li>
+                                        <li class="footer-nav-item">
+                                            <a href="#" class="footer-nav-link">Contact</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div class="footer-nav-wrap">
+                                <dt class="footer-nav-heading">INFORMATION</dt>
+                                <dd>
+                                    <ul class="footer-nav-list">
+                                        <li class="footer-nav-item">
+                                            <a href="#" class="footer-nav-link">Tearms & Condition</a>
+                                        </li>
+                                        <li class="footer-nav-item">
+                                            <a href="#" class="footer-nav-link">Privacy Policy</a>
+                                        </li>
+                                        <li class="footer-nav-item">
+                                            <a href="#" class="footer-nav-link">How to Buy</a>
+                                        </li>
+                                        <li class="footer-nav-item">
+                                            <a href="#" class="footer-nav-link">How to Sell</a>
+                                        </li>
+                                        <li class="footer-nav-item">
+                                            <a href="#" class="footer-nav-link">Promotion</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div class="footer-nav-wrap">
+                                <dt class="footer-nav-heading">SHOP CATEGORY</dt>
+                                <dd>
+                                    <ul class="footer-nav-list">
+                                        <li class="footer-nav-item">
+                                            <a href="#" class="footer-nav-link">Men</a>
+                                        </li>
+                                        <li class="footer-nav-item">
+                                            <a href="#" class="footer-nav-link">Women</a>
+                                        </li>
+                                        <li class="footer-nav-item">
+                                            <a href="#" class="footer-nav-link">Child</a>
+                                        </li>
+                                        <li class="footer-nav-item">
+                                            <a href="#" class="footer-nav-link">Apparel</a>
+                                        </li>
+                                        <li class="footer-nav-item">
+                                            <a href="#" class="footer-nav-link">Brows All</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bootom-inner">
+                    <div class="copyright-box">
+                        © 2017 Brand All Rights Reserved.
+                    </div>
+                    <ul class="social-list">
+                        <li>
+                            <a class="social-link" href="#">
+                                <i class="fab fa-facebook-f"></i>
+                                <span class="visually-hidden">Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-link" href="#">
+                                <i class="fab fa-twitter"></i>
+                                <span class="visually-hidden">Twitter</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-link" href="#">
+                                <i class="fab fa-pinterest-p"></i>
+                                <span class="visually-hidden">pinterest</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-link" href="#">
+                                <i class="fab fa-google-plus-g"></i>
+                                <span class="visually-hidden">google-plus-g</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
 </body>
 
 </html>
