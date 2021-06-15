@@ -10,53 +10,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Страница товара</title>
+    <title>Single Page</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="top-header">
+        <div class="header__top">
             <div class="container">
-                <div class="top-header__inner">
-                    <div class="top-header-left">
-                        <a class="logo-box" href="index.html">
-                            <img src="images/logo.png" alt="Logo">
-                            <p class="logo-text">bran<span>d</span></p>
+                <div class="header__top-inner">
+                    <div class="header__top-left">
+                        <a class="logo" href="index.html">
+                            <img class="logo__img" src="images/logo.png" alt="Logo">
+                            <p class="logo__text">bran<span>d</span></p>
                         </a>
-                        <div class="search">
-                            <form class="search-form" action="#">
-                                <details class="drop-down">
-                                    <summary class="drop-down-btn">Browse</summary>
-                                    <div class="drop-down-menu">
-                                        <div class="drop-down-item">
-                                            <h3 class="drop-heading">Women</h3>
-                                            <a href="#" class="drop-link">Dresses</a>
-                                            <a href="#" class="drop-link">Tops</a>
-                                            <a href="#" class="drop-link">Sweaters/Knits</a>
-                                            <a href="#" class="drop-link">Jackets/Coats</a>
-                                            <a href="#" class="drop-link">Denim</a>
-                                            <a href="#" class="drop-link">Leggings/Pants</a>
-                                            <a href="#" class="drop-link">Blazers</a>
-                                            <a href="#" class="drop-link">Skirts/Shorts</a>
-                                            <a href="#" class="drop-link">Accessories</a>
-                                        </div>
-                                        <div class="drop-down-item">
-                                            <h3 class="drop-heading">Men</h3>
-                                            <a href="#" class="drop-link">Tees/Tank tops</a>
-                                            <a href="#" class="drop-link">Shirts/Polos</a>
-                                            <a href="#" class="drop-link">Sweaters</a>
-                                            <a href="#" class="drop-link">Sweatshirts/Hoodies</a>
-                                            <a href="#" class="drop-link">Blazers</a>
-                                            <a href="#" class="drop-link">Jackets/vests</a>
-                                        </div>
+                        <form class="search-form" action="#">
+                            <details class="drop-down">
+                                <summary class="drop-down-btn">Browse</summary>
+                                <div class="drop-down-menu">
+                                    <div class="drop-down-item">
+                                        <h3 class="drop-heading">Women</h3>
+                                        <a href="#" class="drop-link">Dresses</a>
+                                        <a href="#" class="drop-link">Tops</a>
+                                        <a href="#" class="drop-link">Sweaters/Knits</a>
+                                        <a href="#" class="drop-link">Jackets/Coats</a>
+                                        <a href="#" class="drop-link">Denim</a>
+                                        <a href="#" class="drop-link">Leggings/Pants</a>
+                                        <a href="#" class="drop-link">Blazers</a>
+                                        <a href="#" class="drop-link">Skirts/Shorts</a>
+                                        <a href="#" class="drop-link">Accessories</a>
                                     </div>
-                                </details>
-                                <input class="search-field" type="text" placeholder="Search for Item...">
-                                <button class="search-btn"><i class="fas fa-search"></i></button>
-                            </form>
-                        </div>
+                                    <div class="drop-down-item">
+                                        <h3 class="drop-heading">Men</h3>
+                                        <a href="#" class="drop-link">Tees/Tank tops</a>
+                                        <a href="#" class="drop-link">Shirts/Polos</a>
+                                        <a href="#" class="drop-link">Sweaters</a>
+                                        <a href="#" class="drop-link">Sweatshirts/Hoodies</a>
+                                        <a href="#" class="drop-link">Blazers</a>
+                                        <a href="#" class="drop-link">Jackets/vests</a>
+                                    </div>
+                                </div>
+                            </details>
+                            <input class="search-form__input" type="text" placeholder="Search for Item...">
+                            <button class="search-form__btn"><i class="fas fa-search"></i></button>
+                        </form>
+
                     </div>
-                    <div class="top-header-right">
+                    <div class="header__top--right">
                         <ul class="user-menu">
                             <li class="user-item">
                                 <a href="#" class="cart">
@@ -103,129 +102,132 @@
             </div>
         </div>
         <hr class="header-line">
-        <div class="menu">
+        <div class="header__bottom">
             <div class="container">
-                <ul class="menu-list">
-                    <li class="menu-item">
-                        <a href="№" class="menu-link">Home</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Man</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="single-page.html" class="menu-link">Women</a>
-                        <div class="mega-menu">
-                            <div class="mega-menu-item">
-                                <h3 class="mega-menu-heading">Women</h3>
-                                <a href="#" class="mega-link">Dresses</a>
-                                <a href="#" class="mega-link">Tops</a>
-                                <a href="#" class="mega-link">Sweaters/Knits</a>
-                                <a href="#" class="mega-link">Jackets/Coats</a>
-                                <a href="#" class="mega-link">Blazers</a>
-                                <a href="#" class="mega-link">Denim</a>
-                                <a href="#" class="mega-link">Leggings/Pants</a>
-                                <a href="#" class="mega-link">Skirts/Shorts</a>
-                                <a href="#" class="mega-link">Accessories</a>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a class="menu__link menu__link_active" href="#">Home</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="#">Man</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="single-page.html">Women</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-item">
+                                    <h3 class="mega-menu-heading">Women</h3>
+                                    <a href="#" class="mega-link">Dresses</a>
+                                    <a href="#" class="mega-link">Tops</a>
+                                    <a href="#" class="mega-link">Sweaters/Knits</a>
+                                    <a href="#" class="mega-link">Jackets/Coats</a>
+                                    <a href="#" class="mega-link">Blazers</a>
+                                    <a href="#" class="mega-link">Denim</a>
+                                    <a href="#" class="mega-link">Leggings/Pants</a>
+                                    <a href="#" class="mega-link">Skirts/Shorts</a>
+                                    <a href="#" class="mega-link">Accessories</a>
+                                </div>
+                                <div class="mega-menu-item">
+                                    <h3 class="mega-menu-heading">Women</h3>
+                                    <a href="#" class="mega-link">Dresses</a>
+                                    <a href="#" class="mega-link">Tops</a>
+                                    <a href="#" class="mega-link">Sweaters/Knits</a>
+                                    <a href="#" class="mega-link">Jackets/Coats</a>
+                                </div>
+                                <div class="mega-menu-item">
+                                    <h3 class="mega-menu-heading">Women</h3>
+                                    <a href="#" class="mega-link">Dresses</a>
+                                    <a href="#" class="mega-link">Tops</a>
+                                    <a href="#" class="mega-link">Sweaters/Knits</a>
+                                    <a href="#" class="mega-link">Jackets/Coats</a>
+                                </div>
                             </div>
-                            <div class="mega-menu-item">
-                                <h3 class="mega-menu-heading">Women</h3>
-                                <a href="#" class="mega-link">Dresses</a>
-                                <a href="#" class="mega-link">Tops</a>
-                                <a href="#" class="mega-link">Sweaters/Knits</a>
-                                <a href="#" class="mega-link">Jackets/Coats</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="#">Kids</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="#">Accoseriese</a>
+                        </li>
+                        <li class="menu__list-item menu-item-last">
+                            <a class="menu__link" href="#">Featured</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-item">
+                                    <h3 class="mega-menu-heading">Women</h3>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                </div>
+                                <div class="mega-menu-item">
+                                    <h3 class="mega-menu-heading">Women</h3>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                </div>
+                                <div class="mega-menu-item">
+                                    <h3 class="mega-menu-heading">Women</h3>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                </div>
                             </div>
-                            <div class="mega-menu-item">
-                                <h3 class="mega-menu-heading">Women</h3>
-                                <a href="#" class="mega-link">Dresses</a>
-                                <a href="#" class="mega-link">Tops</a>
-                                <a href="#" class="mega-link">Sweaters/Knits</a>
-                                <a href="#" class="mega-link">Jackets/Coats</a>
+                        </li>
+                        <li class="menu__list-item menu-item-last">
+                            <a class="menu__link" href="#">Hot Deals</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-item">
+                                    <h3 class="mega-menu-heading">Women</h3>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                </div>
+                                <div class="mega-menu-item">
+                                    <h3 class="mega-menu-heading">Women</h3>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                </div>
+                                <div class="mega-menu-item">
+                                    <h3 class="mega-menu-heading">Women</h3>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                    <a href="#" class="mega-link">Some text</a>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Kids</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Accoseriese</a>
-                    </li>
-                    <li class="menu-item menu-item-last">
-                        <a href="#" class="menu-link">Featured</a>
-                        <div class="mega-menu">
-                            <div class="mega-menu-item">
-                                <h3 class="mega-menu-heading">Women</h3>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                            </div>
-                            <div class="mega-menu-item">
-                                <h3 class="mega-menu-heading">Women</h3>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                            </div>
-                            <div class="mega-menu-item">
-                                <h3 class="mega-menu-heading">Women</h3>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="menu-item menu-item-last">
-                        <a href="#" class="menu-link">Hot Deals</a>
-                        <div class="mega-menu">
-                            <div class="mega-menu-item">
-                                <h3 class="mega-menu-heading">Women</h3>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                            </div>
-                            <div class="mega-menu-item">
-                                <h3 class="mega-menu-heading">Women</h3>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                            </div>
-                            <div class="mega-menu-item">
-                                <h3 class="mega-menu-heading">Women</h3>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                                <a href="#" class="mega-link">Some text</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+
+                </nav>
             </div>
         </div>
     </header>
