@@ -926,48 +926,39 @@ img
     color: #fff
 
 
-.product-header 
+.category 
     padding: 65px 0
     background-color: #f8f3f4
+    &__inner
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__title
+        font-size: 24px
+        text-transform: uppercase
+        color: #f16d7f
+        font-weight: 900
 
+.breadcrumbs
+    &__list
+        list-style: none
+        display: flex
+    &__item::after
+        content: "/"
+        color: #636363
+    &__item:last-of-type::after
+        content: ""
+    &__link
+        font-size: 14px
+        text-transform: uppercase
+        font-weight: 300
+        color: #636363
+    &__link_active
+        color: #f16d7f
+        font-weight: 700
+ 
+    
 
-.product-header-inner 
-    display: flex
-    justify-content: space-between
-    align-items: center
-
-
-.category-heading 
-    font-size: 24px
-    text-transform: uppercase
-    color: #f16d7f
-    font-weight: 900
-
-
-.breadcrumb-list 
-    list-style: none
-    display: flex
-
-
-.category-item::after 
-    content: "/"
-    color: #636363
-
-
-.category-link 
-    font-size: 14px
-    text-transform: uppercase
-    font-weight: 300
-    color: #636363
-
-
-.active>.category-link 
-    color: #f16d7f
-    font-weight: 700
-
-
-.active::after 
-    content: ""
 
 
 .product-slider 
@@ -1007,7 +998,13 @@ img
 .checkout
     padding: 60px 0
     &__content
-        padding: 39px 35px
+        max-height: 0
+        visibility: hidden
+        &_open
+            padding: 39px 35px 79px
+            max-height: 100%
+            border-bottom: 1px solid #e8e8e8
+            visibility: visible
     &__form
         display: flex
         justify-content: space-between
@@ -1045,6 +1042,22 @@ img
         display: flex
         align-items: center
         margin-bottom: 20px
+    &__btn
+        padding: 19px 50px
+        background-color: #fff
+        border: 1px solid #eaeaea
+        font-size: 14px
+        font-weight: 700
+        text-transform: uppercase
+        cursor: pointer
+        &:hover
+            background-color: #eaeaea
+    &__link
+        color: #222222
+        font-size: 14px
+        font-weight: 400
+        line-height: 20px
+        margin-left: 32px
 
 
 .checkout__title
@@ -1052,6 +1065,10 @@ img
     font-size: 16px
     font-weight: 700
     text-transform: uppercase
+    border-bottom: 1px solid #e8e8e8
+    padding: 20px 0
+    &_open
+        border-bottom: none
 
     
 .radio__input
@@ -1089,3 +1106,4 @@ img
     font-size: 13px
     font-weight: 400
     line-height: 20px
+    margin-bottom: 32px

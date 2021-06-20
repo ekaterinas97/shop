@@ -231,15 +231,34 @@
             </div>
         </div>
     </header>
-
+    <div class="category">
+        <div class="container">
+            <div class="category__inner">
+                <h2 class="category__title">New Arrivals</h2>
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Home</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Men</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link breadcrumbs__link_active">New Arrivals</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
     <section class="checkout">
         <div class="container">
             <div class="checkout__accordion">
                 <div class="checkout__item">
-                    <div class="checkout__title">
+                    <div class="checkout__title checkout__title_open">
                         01.Shipping Adress
                     </div>
-                    <div class="checkout__content">
+                    <div class="checkout__content checkout__content_open">
                         <form class="checkout__form" action="">
                             <div class="checkout__form-left">
                                 <div class="checkout__heading">Check as a guest or register</div>
@@ -257,6 +276,8 @@
                                 <div class="checkout__heading">register and save time!</div>
                                 <p class="checkout__description checkout__description_mb">Register with us for future convenience</p>
 
+                                <button class="checkout__btn" type="submit">Continue</button>
+
                             </div>
                             <div class="checkout__form-right">
                                 <div class="checkout__heading">Already registed?</div>
@@ -269,10 +290,38 @@
                                     <span class="checkout__label_text checkout__label_required">PASSWORD</span>                                   
                                     <input class="checkout__input" type="password" name="password" id="">
                                 </label>
-                                <button type="submit">Log in</button>
                                 <p class="required-text">* Required Fileds</p>
+                                <button class="checkout__btn" type="submit">Log in</button>
+                                <a class="checkout__link" href="#">Forgot Password ?</a>
                             </div>
                         </form>
+                    </div>
+                </div>
+                <div class="checkout__item">
+                    <div class="checkout__title">
+                        02. BILLING INFORMATION
+                    </div>
+                    <div class="checkout__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nulla neque suscipit velit soluta inventore mollitia quasi sed. Veniam nihil ex consequuntur dolores quam optio vero voluptates aperiam sunt dolore. Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Illo iure consequatur consectetur eius nam, sequi quisquam nisi commodi unde nostrum?
+                    </div>
+                </div>
+                <div class="checkout__item">
+                    <div class="checkout__title">
+                        03. SHIPPING INFORMATION
+                    </div>
+                    <div class="checkout__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nulla neque suscipit velit soluta inventore mollitia quasi sed. Veniam nihil ex consequuntur dolores quam optio vero voluptates aperiam sunt dolore. Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Illo iure consequatur consectetur eius nam, sequi quisquam nisi commodi unde nostrum?
+                    </div>
+                </div>
+                <div class="checkout__item">
+                    <div class="checkout__title">
+                        04. SHIPPING METHOD
+                    </div>
+                    <div class="checkout__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nulla neque suscipit velit soluta inventore mollitia quasi sed. Veniam nihil ex consequuntur dolores quam optio vero voluptates aperiam sunt dolore. Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Illo iure consequatur consectetur eius nam, sequi quisquam nisi commodi unde nostrum?
                     </div>
                 </div>
             </div>
@@ -435,6 +484,19 @@
         </div>
 
     </footer>
+
+    <script>
+        let checkoutTitles = document.querySelectorAll('.checkout__title');
+
+        for (let checkoutTitle of checkoutTitles) {
+            checkoutTitle.addEventListener('click', function() {
+                this.classList.toggle('checkout__title_open');
+                let content = this.nextElementSibling;
+                content.classList.toggle('checkout__content_open');
+
+            });
+        }
+    </script>
 </body>
 
 </html>
