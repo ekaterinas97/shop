@@ -23,7 +23,7 @@
                             <img class="logo__img" src="images/logo.png" alt="Logo">
                             <p class="logo__text">bran<span>d</span></p>
                         </a>
-                        <form class="search-form" action="#">
+                        <div class="form-detail-block">
                             <details class="drop-down">
                                 <summary class="drop-down-btn">Browse</summary>
                                 <div class="drop-down-menu">
@@ -50,10 +50,11 @@
                                     </div>
                                 </div>
                             </details>
-                            <input class="search-form__input" type="text" placeholder="Search for Item...">
-                            <button class="search-form__btn"><i class="fas fa-search"></i></button>
-                        </form>
-
+                            <form class="search-form" action="#">
+                                <input class="search-form__input" type="text" placeholder="Search for Item...">
+                                <button class="search-form__btn"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
                     </div>
                     <div class="header__top--right">
                         <ul class="user-menu">
@@ -86,13 +87,13 @@
                                             <p>$500.00</p>
                                         </div>
                                     </div>
-                                    <a href="#" class="checkout-btn">Checkout</a>
+                                    <a href="checkout.html" class="checkout-btn">Checkout</a>
                                     <a href="#" class="go-to-cart-btn">Go to cart</a>
                                 </div>
                             </li>
                             <li>
-                                <a href="checkout.html" class="shop-btn account-btn">My Account
-                                    <i class="fas fa-caret-down"></i>
+                                <a href="#" class="shop-btn account-btn">
+                                    My Account
                                 </a>
                             </li>
                         </ul>
@@ -251,14 +252,145 @@
             </div>
         </div>
     </div>
-    <section class="product-inner">
-        <div class="product-slider">
-            <div class="slider-wrapper">
-                <div class="product-slider-inner">
-                    <img src="images/product-slide-1.jpg" alt="slide">
+    <section class="product">
+        <div class="product__inner">
+            <div class="product-slider">
+                <div class="slider-wrapper">
+                    <div class="product-slider-inner">
+                        <img src="images/product-slide-1.jpg" alt="slide">
+                    </div>
+                    <div class="arrow-left"><i class="fas fa-chevron-left"></i></div>
+                    <div class="arrow-right"><i class="fas fa-chevron-right"></i></div>
                 </div>
-                <div class="arrow-left"><i class="fas fa-chevron-left"></i></div>
-                <div class="arrow-right"><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="product__content">
+                <div class="container">
+                    <div class="product-box">
+                        <div class="product-box__inner">
+                            <div class="product-box__inner-top">
+                                <div class="product-box__category">WOMEN COLLECTION</div>
+                                <div class="product-box__title">Moschino Cheap And Chic</div>
+                                <div class="product-box__text">
+                                    Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.
+                                </div>
+                                <div class="product-box__data-block">
+                                    <dl class="data-list">
+                                        <div class="data-list__item">
+                                            <dt>material:</dt>
+                                            <dd>cotton</dd>
+                                        </div>
+                                        <div class="data-list__item">
+                                            <dt>DESIGNER:</dt>
+                                            <dd>BINBURHAN</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                                <p class="product-box__price">$561</p>
+                            </div>
+                            <div class="product-box__inner-bottom">
+                                <form>
+                                    <div class="product__features">
+                                        <div class="product__features-item">
+                                            <label class="product__features-label" for="color">CHOOSE COLOR</label>
+                                            <div class="chooser-box">
+                                                <select class="chooser color-chooser" name="" id="color">
+                                                    <option class="red" value="red">Red</option>
+                                                    <option value="blue">Blue</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="product__features-item">
+                                            <label class="product__features-label" for="size">CHOOSE SIZE</label>
+                                            <div class="chooser-box">
+                                                <select class="chooser size-chooser" name="" id="size">
+                                                    <option value="xxl">XXL</option>
+                                                    <option value="xs">xs</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="product__features-item">
+                                            <label class="product__features-label" for="quantity">QUANTITY</label>
+                                            <div class="quantity-box">
+                                                <input class="input-quantity" type="number" id="quantity" step="1" min="1" max="100" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="button-box">
+                                        <button class="product__btn" type="submit">Add to Cart</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="like-catalog">
+        <div class="container">
+            <h2 class="like-catalog__title">you may like also</h2>
+            <div class="products-list">
+                <div class="item-wrapper">
+                    <a href="single-page.html" class="product-item">
+                        <img class="product-img" src="images/like-1.jpg" alt="photo">
+                        <div class="product-info">
+                            <p class="product-item-title">Mango People T-shirt</p>
+                            <p class="product-price">$52.00</p>
+                        </div>
+                    </a>
+                    <div class="add-box">
+                        <a class="add-btn" href="#">
+                            <img src="images/product-cart.svg" alt="">
+                            <p href="#" class="add-text">Add to cart</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <a href="#" class="product-item">
+                        <img class="product-img" src="images/like-2.jpg" alt="">
+                        <div class="product-info">
+                            <p class="product-item-title">Mango People T-shirt</p>
+                            <p class="product-price">$52.00</p>
+                        </div>
+                    </a>
+                    <div class="add-box">
+                        <a class="add-btn" href="#">
+                            <img src="images/product-cart.svg" alt="">
+                            <p href="#" class="add-text">Add to cart</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <a href="#" class="product-item">
+                        <img class="product-img" src="images/like-3.jpg" alt="">
+                        <div class="product-info">
+                            <p class="product-item-title">Mango People T-shirt</p>
+                            <p class="product-price">$52.00</p>
+                        </div>
+                    </a>
+                    <div class="add-box">
+                        <a class="add-btn" href="#">
+                            <img src="images/product-cart.svg" alt="">
+                            <p href="#" class="add-text">Add to cart</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <a href="#" class="product-item">
+                        <img class="product-img" src="images/like-4.jpg" alt="">
+                        <div class="product-info">
+                            <p class="product-item-title">Mango People T-shirt</p>
+                            <p class="product-price">$52.00</p>
+                        </div>
+                    </a>
+                    <div class="add-box">
+                        <a class="add-btn" href="#">
+                            <img src="images/product-cart.svg" alt="">
+                            <p href="#" class="add-text">Add to cart</p>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

@@ -1,9 +1,13 @@
-*
-    margin: 0
-    padding: 0
-    font-family: 'Lato', sans-serif
-    outline: none
+html 
+  box-sizing: border-box
 
+*, *:before, *:after 
+  box-sizing: inherit
+  margin: 0
+  padding: 0
+
+body
+  font-family: 'Lato', sans-serif
 
 a 
     text-decoration: none
@@ -12,6 +16,8 @@ a
 img
     max-width: 100%
     height: auto
+i 
+    font-family: 'fontAwesome' !important
 
 .visually-hidden 
     position: absolute
@@ -24,8 +30,9 @@ img
 
 
 .container 
-    max-width: 1140px
+    max-width: 1170px
     margin: 0 auto
+    padding: 0 15px
 
 
 .shop-btn 
@@ -72,28 +79,35 @@ img
             font-weight: 900
             color: #f16d7f
 
-.browse 
-    border: 1px solid #e6e6e6
-    border-radius: 3px 0 0 3px
-    padding: 14px 15px
-
+// .browse 
+//     border: 1px solid #e6e6e6
+//     border-radius: 3px 0 0 3px
+//     padding: 14px 15px
+.form-detail-block
+    display: flex    
+    margin-left: 37px
 .search-form 
     display: flex
-    margin-left: 37px
     &__input
-        padding: 12px 16px
+        height: 38px
+        line-height: 32px
+        padding: 2px 16px
         outline: none
         width: 280px
         border: 1px solid #e6e6e6
         border-left-color: transparent
         border-right-color: transparent
+        &::placeholder
+            color: #a4a4a4
+
     &__btn
         display: block
-        padding: 12px
+        padding: 0 12px
         border: 1px solid #e6e6e6
         background-color: transparent
         border-radius: 0 3px 3px 0
         cursor: pointer
+        line-height: 32px
 
 
 .drop-down-item 
@@ -106,7 +120,7 @@ img
 
 .drop-down-btn 
     display: block
-    padding: 14px 9px 14px 15px
+    padding: 2px 9px 2px 15px
     border-radius: 5px 0 0 5px
     border: 1px solid #e8e8e8
     cursor: pointer
@@ -115,6 +129,7 @@ img
     font-weight: 300
     color: #222
     letter-spacing: 0.35px
+    line-height: 32px
 
 
 .drop-down-btn::after 
@@ -319,11 +334,19 @@ img
 .account-btn 
     display: block
     font-size: 15px
-    line-height: 24px
+    line-height: 32px
     letter-spacing: 0.38px
-    padding: 13px 12px 11px 19px
+    padding: 3px 29px 3px 19px
     transition: 0.2s
-
+    position: relative
+    &::after
+        content: '\f0d7'
+        display: block
+        position: absolute
+        font-family: "FontAwesome"
+        top: 50%
+        transform: translateY(-50%)
+        right: 12px
 
 .fa-caret-down 
     font-size: 14px
@@ -412,7 +435,7 @@ img
 
 
 .menu__link 
-    padding: 10px 0
+    padding: 12px 0
     display: block
     position: relative
     text-transform: uppercase
@@ -555,7 +578,8 @@ img
 .item-wrapper 
     position: relative
     margin-bottom: 40px
-
+    width: 263px
+    transition: all .3s ease
 
 .item-wrapper:hover 
     box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16)
@@ -633,57 +657,84 @@ img
     font-size: 15px
 
 
-.offer-section 
-    padding: 50px 0
-
-
-.offer-box 
-    display: flex
-
-
-.offer-img 
-    flex-basis: 767px
-    flex-grow: 1
-
-
-.offer-info 
+// Блок с предложением
+.offer-block
+    padding: 50px 0 97px
+    &__inner
+        display: flex
+    &__img-container
+        position: relative
+        flex-basis: calc( 100% -  373px)
+        & img
+            display: block
+            max-width: 100%
+            height: auto
+    &__img-text
+        position: absolute
+        top: 146px
+        left: 39px
+        font-size: 32px
+        letter-spacing: 0.9px
+        font-weight: 700
+        color: #fff
+        text-transform: uppercase
+        & p
+            font-size: 54px
+            letter-spacing: 1.5px
+        & span
+            color: #f16d7f
+    
+.offer-block__info
+    max-width:  373px
+    width: 100%
     background-color: #222224
-    flex-basis: 373px
-    padding: 48px 43px 66px 36px
+    padding: 48px 43px 66px 32px
 
-
-.offer-item 
+.offer-list
+    
+.offer-list__item
     display: flex
-    margin-bottom: 50px
-
-
-.offer-item:last-of-type 
-    margin-bottom: 0
-
-
-.offer-item-img 
-    flex-grow: 2
-
-
-.offer-text 
-    width: 219px
-    flex-grow: 1
-
-
-.offer-heading 
+    justify-content: space-between
+    align-items: flex-start
+    &:last-of-type
+        margin-bottom: 0
+.offer-list
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+.offer-list__caption
+    flex-basis: 219px
     color: #fbfbfb
+.offer-list__title
     font-size: 20px
-    margin-bottom: 17px
+    font-weight: 700
     letter-spacing: 0.5px
+    margin-bottom: 17px
 
-
-.offer-description 
-    color: #fbfbfb
-    font-size: 14px;
-    letter-spacing: 0.35px
+.offer-list__text
+    font-size: 14px
+    font-weight: 300
     line-height: 24px
+    letter-spacing: 0.35px
 
-
+.catalog-offer
+    padding-top: 89px
+    padding-bottom: 114px
+    background-color: #222224
+    & .offer-list
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-around
+    & .offer-list__item
+        flex-direction: column
+        align-items: center
+        text-align: center
+        max-width: 310px
+    & .offer-list__img
+        margin-bottom: 24px
+    & .offer-list__caption
+        flex-basis: auto
 .subscribe 
     margin-bottom: 100px
     background-image: url(../images/layer-41.jpg)
@@ -786,13 +837,14 @@ img
     background-color: #e1e1e1
     border: 0
     width: 283px
-    box-sizing: border-box
+    height: 46px
+    outline: none
 
 
 .subscribe-btn 
     border-radius: 0 23px 23px 0
     border: none
-    padding: 18px 20px 18px 21px
+    padding: 0 20px 0 21px
     background-color: #f16d7f
     color: #fff
     font-size: 14px
@@ -957,14 +1009,113 @@ img
         color: #f16d7f
         font-weight: 700
  
-    
-
-
-
 .product-slider 
     background-color: #f7f7f7
     text-align: center
+    padding-bottom: 87px   
 
+
+.product-box
+    padding-top: 73px
+    padding-bottom: 122px
+    background-color: #fff
+    margin-bottom: 59px
+    margin-top: -87px
+    border: 1px solid #eaeaea
+    text-align: center
+    &__inner
+        max-width: 642px
+        margin: 0 auto
+    &__inner-top
+        padding-bottom: 43px
+        border-bottom: 1px solid #eaeaea
+    &__category
+        color: #f16d7f
+        font-size: 14px
+        font-weight: 700
+        line-height: 24px
+        text-transform: uppercase
+    &__title
+        color: #4d4d4d
+        font-size: 18px
+        font-weight: 400
+        line-height: 24px
+        text-transform: uppercase
+        margin-bottom: 67px
+    &__text 
+        color:#5e5e5e
+        font-size: 14px
+        font-weight: 300
+        line-height: 24px
+        margin-bottom: 28px
+    &__price
+        color: #ef5b70
+        font-size: 24px
+        font-weight: 700
+        line-height: 24px
+
+.data-list
+    display: flex
+    justify-content: center
+    margin-bottom: 37px
+    &__item
+        display: flex
+        margin-right: 44px
+        font-size: 14px
+        font-weight: 700
+        line-height: 24px
+        text-transform: uppercase
+        &:last-of-type
+            margin-right: 0
+        & dt
+            color: #b9b9b9
+        & dd
+            color: #2f2f2f
+
+.product-box__inner-bottom
+    padding-top: 63px
+
+.product__features
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &-item
+        flex-basis: calc( (100% - 52px * 2) / 3 )
+    &-label
+        display: block
+        text-align: left
+        color: #2f2f2f
+        font-size: 14px
+        font-weight: 700
+        line-height: 24px
+        margin-bottom: 10px
+.chooser-box
+    position: relative
+    &::after
+        content: '\f078'
+        font-family: 'FontAwesome'
+        color: #bcbcbc
+        font-size: 14px
+        line-height: 24px
+        display: block
+        position: absolute
+        top: 50%
+        transform: translateY(-50%) 
+        right: 9px
+        z-index: 1
+.color-chooser, .size-chooser, .input-quantity
+    display: block
+    width: 100%
+    border: 1px solid #eaeaea
+    background: none
+    appearance: none
+    -webkit-appearance: none
+    padding: 6px 9px 6px 14px
+    color: #bcbcbc
+    font-size: 13px 
+    line-height: 24px
+    &:focus
+        outline: none
 
 .slider-wrapper 
     position: relative
@@ -972,7 +1123,20 @@ img
     flex-direction: column
     justify-content: center
 
-
+.product__btn
+    width: 100%
+    margin-top: 28px
+    color: #ef5b70
+    font-size: 16px
+    font-weight: 700
+    padding: 12px 0
+    background-color: transparent
+    border: 1px solid #eaeaea
+    cursor: pointer
+    transition: all .2s ease
+    &:hover
+        background-color: #ef5b70
+        color: #fff
 .arrow-left,
 .arrow-right 
     display: flex
@@ -994,7 +1158,16 @@ img
 .arrow-right 
     position: absolute
     right: 0
-
+.like-catalog
+    padding-top: 60px
+    &__title
+        text-transform: uppercase
+        color: #4d4d4d
+        font-size: 24px
+        font-weight: 400
+        line-height: 20px
+        margin-bottom: 70px
+        text-align: center
 .checkout
     padding: 60px 0
     &__content
@@ -1033,7 +1206,7 @@ img
     &__input
         display: block
         width: 388px
-        height: 23px
+        height: 45px
         margin-bottom: 23px
         border: 1px solid #eaeaea
         padding: 10px 10px

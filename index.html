@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/1a1f78895e.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/1a1f78895e.js" crossorigin="anonymous"></script>
     <title>Главная</title>
 </head>
 
@@ -23,7 +23,7 @@
                             <img class="logo__img" src="images/logo.png" alt="Logo">
                             <p class="logo__text">bran<span>d</span></p>
                         </a>
-                        <form class="search-form" action="#">
+                        <div class="form-detail-block">
                             <details class="drop-down">
                                 <summary class="drop-down-btn">Browse</summary>
                                 <div class="drop-down-menu">
@@ -50,10 +50,11 @@
                                     </div>
                                 </div>
                             </details>
-                            <input class="search-form__input" type="text" placeholder="Search for Item...">
-                            <button class="search-form__btn"><i class="fas fa-search"></i></button>
-                        </form>
-
+                            <form class="search-form" action="#">
+                                <input class="search-form__input" type="text" placeholder="Search for Item...">
+                                <button class="search-form__btn"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
                     </div>
                     <div class="header__top--right">
                         <ul class="user-menu">
@@ -86,13 +87,13 @@
                                             <p>$500.00</p>
                                         </div>
                                     </div>
-                                    <a href="#" class="checkout-btn">Checkout</a>
+                                    <a href="checkout.html" class="checkout-btn">Checkout</a>
                                     <a href="#" class="go-to-cart-btn">Go to cart</a>
                                 </div>
                             </li>
                             <li>
-                                <a href="#" class="shop-btn account-btn">My Account
-                                    <i class="fas fa-caret-down"></i>
+                                <a href="#" class="shop-btn account-btn">
+                                    My Account
                                 </a>
                             </li>
                         </ul>
@@ -113,7 +114,7 @@
                             <a class="menu__link" href="#">Man</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__link" href="single-page.html">Women</a>
+                            <a class="menu__link" href="#">Women</a>
                             <div class="mega-menu">
                                 <div class="mega-menu-item">
                                     <h3 class="mega-menu-heading">Women</h3>
@@ -294,7 +295,7 @@
             <p class="description">Shop for items based on what we featured in this week</p>
             <div class="products-list">
                 <div class="item-wrapper">
-                    <a href="#" class="product-item">
+                    <a href="single-page.html" class="product-item">
                         <img class="product-img" src="images/product-1.jpg" alt="photo">
                         <div class="product-info">
                             <p class="product-item-title">Mango People T-shirt</p>
@@ -423,44 +424,51 @@
             </div>
         </div>
     </section>
-    <section class="offer-section">
+    <div class="offer-block">
         <div class="container">
-            <div class="offer-box">
-                <div class="offer-img">
-                    <img src="images/layer-38.jpg" alt="photo">
+            <div class="offer-block__inner">
+                <div class="offer-block__img-container">
+                    <img src="images/offer-img.jpg" alt="" width="767" height="529">
+                    <div class="offer-block__img-text">
+                        <p>30% <span>offer</span></p>
+                        for women</div>
                 </div>
-                <div class="offer-info">
-                    <div class="offer-item">
-                        <div class="offer-item-img">
-                            <img src="images/car.png" alt="">
+                <div class="offer-block__info">
+                    <div class="offer-list">
+                        <div class="offer-list__item">
+                            <img class="offer-list__img" src="images/car.png" alt="">
+                            <div class="offer-list__caption">
+                                <h4 class="offer-list__title">Free Delivery</h4>
+                                <p class="offer-list__text">
+                                    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                                </p>
+                            </div>
                         </div>
-                        <div class="offer-text">
-                            <h3 class="offer-heading">Free Delivery</h3>
-                            <p class="offer-description">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                        <div class="offer-list__item">
+                            <img class="offer-list__img" src="images/sale.png" alt="">
+                            <div class="offer-list__caption">
+                                <h4 class="offer-list__title">Sales & discounts</h4>
+                                <p class="offer-list__text">
+                                    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                                </p>
+                            </div>
                         </div>
+                        <div class="offer-list__item">
+                            <img class="offer-list__img" src="images/crown.png" alt="">
+                            <div class="offer-list__caption">
+                                <h4 class="offer-list__title">Quality assurance</h4>
+                                <p class="offer-list__text">
+                                    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="offer-item">
-                        <div class="offer-item-img">
-                            <img src="images/sale.png" alt="">
-                        </div>
-                        <div class="offer-text">
-                            <h3 class="offer-heading">Sales & discounts</h3>
-                            <p class="offer-description">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
-                        </div>
-                    </div>
-                    <div class="offer-item">
-                        <div class="offer-item-img">
-                            <img src="images/crown.png" alt="">
-                        </div>
-                        <div class="offer-text">
-                            <h3 class="offer-heading">Quality assurance</h3>
-                            <p class="offer-description">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <section class="subscribe">
         <div class="container">
             <div class="subscribe-inner">
