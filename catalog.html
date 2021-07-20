@@ -252,7 +252,108 @@
             </div>
         </div>
     </div>
-
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog__inner">
+                <div class="catalog__left">
+                    <details class="category-list">
+                        <summary class="category-list__title category-list__title-open">
+                            Category
+                            <i class="fas fa-sort-down"></i>
+                        </summary>
+                        <div class="category-list__item">
+                            <ul>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Denim</a></li>
+                                <li><a href="#">Hoodies & Sweatshirts</a></li>
+                                <li><a href="#">Jackets & Coats</a></li>
+                                <li><a href="#">Pants</a></li>
+                                <li><a href="#">Polos</a></li>
+                                <li><a href="#">Shirts</a></li>
+                                <li><a href="#">Shoes</a></li>
+                                <li><a href="#">Shorts</a></li>
+                                <li><a href="#">Sweaters & Knits</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Tanks</a></li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details class="category-list">
+                        <summary class="category-list__title category-list__title-open">
+                            BRAND
+                            <i class="fas fa-sort-down"></i>
+                        </summary>
+                        <div class="category-list__item">
+                            <ul>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Denim</a></li>
+                                <li><a href="#">Hoodies & Sweatshirts</a></li>
+                                <li><a href="#">Jackets & Coats</a></li>
+                                <li><a href="#">Pants</a></li>
+                                <li><a href="#">Polos</a></li>
+                                <li><a href="#">Shirts</a></li>
+                                <li><a href="#">Shoes</a></li>
+                                <li><a href="#">Shorts</a></li>
+                                <li><a href="#">Sweaters & Knits</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Tanks</a></li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details class="category-list">
+                        <summary class="category-list__title category-list__title-open">
+                            dESIGNER
+                            <i class="fas fa-sort-down"></i>
+                        </summary>
+                        <div class="category-list__item">
+                            <ul>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Denim</a></li>
+                                <li><a href="#">Hoodies & Sweatshirts</a></li>
+                                <li><a href="#">Jackets & Coats</a></li>
+                                <li><a href="#">Pants</a></li>
+                                <li><a href="#">Polos</a></li>
+                                <li><a href="#">Shirts</a></li>
+                                <li><a href="#">Shoes</a></li>
+                                <li><a href="#">Shorts</a></li>
+                                <li><a href="#">Sweaters & Knits</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Tanks</a></li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+                <div class="catalog__content">
+                    <div class="trending">
+                        <h4 class="trending__title">Trending now</h4>
+                        <ul class="trending__list">
+                            <li class="trending__item">
+                                <a class="tending__link" href="#">Bohemian</a>
+                            </li>
+                            <li class="trending__item">
+                                <a class="tending__link" href="#">Floral</a>
+                            </li>
+                            <li class="trending__item">
+                                <a class="tending__link" href="#">Lace</a>
+                            </li>
+                            <li class="trending__item">
+                                <a class="tending__link" href="#">Floral</a>
+                            </li>
+                            <li class="trending__item">
+                                <a class="tending__link" href="#">Lace</a>
+                            </li>
+                            <li class="trending__item">
+                                <a class="tending__link" href="#">Bohemian</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="catalog-offer">
         <div class="container">
             <div class="offer-list">
@@ -443,6 +544,20 @@
         </div>
 
     </footer>
+    <script>
+        "use strict";
+        let catalogTitle = document.querySelector('.category-list__title');
+        let iconCatalogTitle = catalogTitle.querySelector('i');
+        catalogTitle.addEventListener('click', function() {
+            if (iconCatalogTitle.classList.contains('fa-sort-down')) {
+                iconCatalogTitle.classList.remove('fa-sort-down');
+                iconCatalogTitle.classList.add('fa-sort-up');
+            } else {
+                iconCatalogTitle.classList.remove('fa-sort-up');
+                iconCatalogTitle.classList.add('fa-sort-down');
+            }
+        });
+    </script>
 
 </body>
 
